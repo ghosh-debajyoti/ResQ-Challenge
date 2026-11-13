@@ -22,7 +22,6 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -53,13 +52,13 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
         estimatedTeams: '1-2',
       });
       onClose();
-    }, 2500);
+    }, 2800);
   };
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-institutional-navy/80 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-yc-dark/70 backdrop-blur-sm">
           {/* Backdrop Clickable Area */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -71,11 +70,11 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
 
           {/* Modal Container */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            initial={{ opacity: 0, scale: 0.96, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 15 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="bg-clean-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-border-cool-grey relative max-h-[90vh] overflow-y-auto z-10"
+            exit={{ opacity: 0, scale: 0.96, y: 10 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="bg-white rounded-lg max-w-lg w-full p-6 sm:p-8 shadow-xl border border-yc-border relative max-h-[92vh] overflow-y-auto z-10 text-yc-dark"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
@@ -83,29 +82,32 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-5 right-5 text-secondary hover:text-institutional-navy p-1 transition-colors rounded-lg"
+              className="absolute top-5 right-5 text-yc-muted hover:text-yc-dark p-1 transition-colors rounded"
               aria-label="Close registration modal"
             >
               <span className="material-symbols-outlined text-2xl">close</span>
             </button>
 
             {/* Modal Header */}
-            <div className="mb-6">
-              <span className="bg-primary-container text-clean-white font-badge-mono text-[10px] px-2 py-0.5 rounded font-bold uppercase">
-                OFFICIAL ONBOARDING
-              </span>
-              <h3 id="modal-title" className="font-headline-md text-xl sm:text-headline-md text-institutional-navy font-bold mt-2">
-                Register Your School for ATRIA IT COMMUNITY CHALLENGE
+            <div className="mb-6 space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-atria-red" />
+                <span className="font-nav text-xs font-semibold tracking-wider text-atria-red uppercase">
+                  Institutional Expression of Interest
+                </span>
+              </div>
+              <h3 id="modal-title" className="font-display text-xl sm:text-2xl font-bold text-yc-dark tracking-tight leading-snug">
+                Register Your School for Atria IT Community Challenge
               </h3>
-              <p className="font-body-sm text-xs sm:text-body-sm text-secondary mt-1 leading-relaxed">
-                Express your school’s participation in the Atria IT Community Challenge. An Atria initiative officer will coordinate the team onboarding kit.
+              <p className="font-body text-xs sm:text-sm text-yc-muted leading-relaxed">
+                Nominate student squads from Classes 8 to 12. An Atria initiative officer will coordinate the school onboarding pack and mentor pairing.
               </p>
             </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
+                <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
                   School Name *
                 </label>
                 <input
@@ -115,13 +117,13 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                   value={formData.schoolName}
                   onChange={handleChange}
                   placeholder="e.g. National Public School, Bengaluru"
-                  className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all"
+                  className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm placeholder:text-yc-muted/50 focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
-                  Coordinator / Teacher Name *
+                <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
+                  Coordinator / Faculty Lead *
                 </label>
                 <input
                   required
@@ -129,14 +131,14 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                   name="coordinatorName"
                   value={formData.coordinatorName}
                   onChange={handleChange}
-                  placeholder="e.g. Dr. Rajesh Kumar"
-                  className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all"
+                  placeholder="e.g. Dr. Rajesh Kumar, Head of Science"
+                  className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm placeholder:text-yc-muted/50 focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
+                  <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
                     Official Email *
                   </label>
                   <input
@@ -145,12 +147,12 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="principal@school.edu"
-                    className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all"
+                    placeholder="stem@school.edu"
+                    className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm placeholder:text-yc-muted/50 focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
+                  <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
                     Contact Phone *
                   </label>
                   <input
@@ -159,16 +161,16 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+91 9876543210"
-                    className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all"
+                    placeholder="+91 98765 43210"
+                    className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm placeholder:text-yc-muted/50 focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
-                    City / District *
+                  <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
+                    City / Location *
                   </label>
                   <input
                     required
@@ -176,44 +178,59 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    placeholder="Bengaluru"
-                    className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all"
+                    placeholder="e.g. Bengaluru, Karnataka"
+                    className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm placeholder:text-yc-muted/50 focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block font-label-sm text-xs text-institutional-navy uppercase mb-1 font-semibold">
-                    Estimated Teams
+                  <label className="block font-nav text-xs text-yc-dark uppercase mb-1 font-semibold">
+                    Estimated Squads
                   </label>
                   <select
                     name="estimatedTeams"
                     value={formData.estimatedTeams}
                     onChange={handleChange}
-                    className="w-full px-3 py-2.5 rounded-lg border border-[#CBD5E1] text-[#1E293B] text-body-sm focus:border-institutional-navy focus:ring-2 focus:ring-primary-container/20 outline-none transition-all bg-white"
+                    className="w-full px-3 py-2.5 rounded border border-yc-border text-yc-dark text-sm focus:border-atria-red focus:ring-1 focus:ring-atria-red outline-none transition-all bg-white"
                   >
-                    <option value="1-2">1 – 2 Teams (3–10 Students)</option>
-                    <option value="3-5">3 – 5 Teams (10–25 Students)</option>
-                    <option value="5+">5+ Teams (Campus Wide)</option>
+                    <option value="1">1 Team (3-5 students)</option>
+                    <option value="2-3">2-3 Teams</option>
+                    <option value="4+">4+ Teams (Multi-grade)</option>
                   </select>
                 </div>
               </div>
 
-              <div className="pt-3">
+              <p className="text-[11px] font-body text-yc-muted leading-relaxed">
+                By submitting this interest form, your institution agrees to receive official challenge timeline updates, mentor pairing rosters, and lab safety schedules from Atria Institute of Technology.
+              </p>
+
+              {/* Submit CTA */}
+              <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full bg-primary-container hover:bg-[#8c1c20] text-clean-white font-label-lg text-sm sm:text-label-lg py-3 rounded-lg shadow-md transition-colors flex items-center justify-center gap-2 active:scale-95"
+                  disabled={isSubmitted}
+                  className="w-full bg-atria-red hover:bg-atria-red-hover text-white py-3.5 rounded font-nav text-xs font-semibold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-none disabled:opacity-80"
                 >
-                  <span>Submit Registration Request</span>
-                  <span className="material-symbols-outlined text-[18px]">send</span>
+                  {isSubmitted ? (
+                    <>
+                      <span className="material-symbols-outlined text-lg animate-spin">progress_activity</span>
+                      <span>Submitting Expression...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit School Nomination</span>
+                      <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </>
+                  )}
                 </button>
               </div>
 
               {isSubmitted && (
                 <motion.div
-                  initial={{ opacity: 0, y: -10 }}
+                  initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-3 bg-surface-container-high rounded text-xs text-institutional-navy font-semibold text-center border border-secondary-container"
+                  className="p-3 bg-yc-bg-subtle border border-yc-border rounded text-center text-xs font-nav text-atria-red font-semibold"
                 >
-                  Registration request received! An Atria coordinator will contact you via email shortly.
+                  Nomination recorded! Our initiative desk will contact the faculty coordinator within 24 business hours.
                 </motion.div>
               )}
             </form>

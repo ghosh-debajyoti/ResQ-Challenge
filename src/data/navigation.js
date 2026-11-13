@@ -1,9 +1,8 @@
 export const navLinks = [
   { name: 'Home', href: '#hero' },
-  { name: 'About the Challenge', href: '#about' },
-  { name: 'The Journey', href: '#journey' },
-  { name: 'Challenges', href: '#challenges' },
-  { name: 'Rewards', href: '#rewards' },
+  { name: 'About', href: '#about' },
+  { name: 'Challenge', href: '#challenges' },
+  { name: 'Journey', href: '#journey' },
   { name: 'Impact', href: '#impact' },
   { name: 'FAQs', href: '#faqs' },
 ];

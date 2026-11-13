@@ -8,13 +8,25 @@ export default {
   theme: {
     extend: {
       colors: {
+        // YC & Atria Official Editorial Palette
+        "yc-dark": "#171717",
+        "yc-muted": "#525252",
+        "yc-border": "#E5E7EB",
+        "yc-bg-subtle": "#F8F9FA",
+        "yc-bg-muted": "#F3F4F6",
+        "atria-red": "#A92328",
+        "atria-red-hover": "#870314",
+        "yc-navy": "#071A35",
+        "yc-navy-secondary": "#062B55",
+        "yc-magenta": "#D21D79",
+
         // Institutional & Core
         "institutional-navy": "#062B55",
         "deep-navy": "#071A35",
         "clean-white": "#FFFFFF",
-        "surface-offwhite": "#F8FAFC",
-        "border-cool-grey": "#E2E8F0",
-        "primary": "#870314",
+        "surface-offwhite": "#F8F9FA",
+        "border-cool-grey": "#E5E7EB",
+        "primary": "#A92328",
         "primary-container": "#A92328",
         "on-primary": "#ffffff",
         "on-primary-container": "#ffbfbb",
@@ -100,6 +112,10 @@ export default {
         "margin-mobile": "1rem",
       },
       fontFamily: {
+        display: ["'Space Grotesk'", "sans-serif"],
+        body: ["'Inter'", "sans-serif"],
+        nav: ["'Sora'", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
         "display-hero": ["'Space Grotesk'", "sans-serif"],
         "display-hero-mobile": ["'Space Grotesk'", "sans-serif"],
         "headline-xl": ["'Space Grotesk'", "sans-serif"],

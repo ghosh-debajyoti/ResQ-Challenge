@@ -5,48 +5,52 @@ import { challengeCategories } from '../data/categories';
 
 export const ChallengeCategories = () => {
   return (
-    <section className="py-12 sm:py-20 bg-surface-offwhite border-b border-border-cool-grey" id="challenges">
+    <section className="py-16 sm:py-24 bg-yc-bg-subtle border-b border-yc-border text-yc-dark" id="challenges">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionHeading
-          eyebrow="THINK BIG. SOLVE REAL PROBLEMS."
-          title="Every Problem Deserves a Solution."
-          description="Students can orient their team projects toward high-priority civic and engineering challenge tracks."
+          eyebrow="PROPOSED PROBLEM DOMAINS"
+          title="WHAT PROBLEM WILL YOU SOLVE?"
+          description="School squads select and investigate pressing local friction across six priority tracks. These proposed categories are customizable based on each school's geographic surroundings."
         />
 
-        {/* Grid of Challenge Theme Cards with Editable Placeholders */}
+        {/* Editorial Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {challengeCategories.map((category, idx) => (
-            <motion.div
+          {challengeCategories.map((category) => (
+            <div
               key={category.track}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="bg-clean-white rounded-xl p-6 border border-border-cool-grey shadow-sm hover:border-institutional-navy hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              className="bg-white rounded-lg p-6 sm:p-7 border border-yc-border hover:border-yc-dark/50 transition-all duration-200 flex flex-col justify-between group"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-secondary-fixed text-on-secondary-fixed font-badge-mono text-badge-mono px-2.5 py-1 rounded">
+                <div className="flex items-center justify-between pb-4 border-b border-yc-border">
+                  <span className="font-nav text-[11px] font-semibold text-yc-muted uppercase tracking-wider">
                     {category.track}
                   </span>
-                  <span className={`material-symbols-outlined text-2xl ${category.iconColor}`}>
+                  <span className="material-symbols-outlined text-xl text-yc-muted group-hover:text-atria-red transition-colors">
                     {category.icon}
                   </span>
                 </div>
-                <h3 className="font-headline-sm text-lg sm:text-headline-sm text-institutional-navy font-bold mb-2">
+
+                <h3 className="font-display text-lg sm:text-xl font-bold text-yc-dark mt-4 mb-2 tracking-tight">
                   {category.title}
                 </h3>
-                <p className="font-body-sm text-sm sm:text-body-sm text-secondary mb-4 leading-relaxed">
+                
+                <p className="font-body text-sm text-yc-muted leading-relaxed">
                   {category.description}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-border-cool-grey/80 flex items-center justify-between text-xs text-secondary">
-                <span className="font-label-sm text-primary">{category.notice}</span>
-                <span className="material-symbols-outlined text-[16px]">edit_note</span>
+              {/* Editable Disclaimer Strip */}
+              <div className="mt-6 pt-3 border-t border-yc-border flex items-center justify-between text-[11px] font-nav text-yc-muted">
+                <span className="text-atria-red font-medium">Proposed Category</span>
+                <span className="text-yc-muted">Editable &amp; Flexible</span>
               </div>
-            </motion.div>
+            </div>
           ))}
+        </div>
+
+        {/* Footnote on track customization */}
+        <div className="mt-8 text-center sm:text-left text-xs font-body text-yc-muted">
+          * Note: Participating squads are encouraged to define custom civic problems within or bridging these proposed domains with faculty approval.
         </div>
       </div>
     </section>
