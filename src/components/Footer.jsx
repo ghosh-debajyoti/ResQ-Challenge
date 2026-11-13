@@ -80,20 +80,25 @@ export const Footer = () => {
               Atria Institute of Technology<br />
               ASKB Campus, 1st Main Rd, AGS Layout, Anandnagar, Hebbal, Bengaluru, Karnataka 560024
             </p>
-            <div className="space-y-1 font-body-sm text-xs text-white/80">
-              <div>
-                Email:{" "}
-                <a className="text-electric-yellow hover:underline" href={`mailto:${institutionalMeta.contact.email}`}>
-                  {institutionalMeta.contact.email}
-                </a>
-              </div>
-              <div>
-                Admissions:{" "}
-                <a className="text-electric-yellow hover:underline" href={`mailto:${institutionalMeta.contact.admissionsEmail}`}>
+            <div className="space-y-2 pt-1 font-body-sm text-xs text-white/80">
+              <div className="flex items-baseline gap-2">
+                <span className="text-white/60 font-medium w-20 shrink-0">Admissions:</span>
+                <a
+                  className="text-electric-yellow hover:underline font-medium break-all"
+                  href={`mailto:${institutionalMeta.contact.admissionsEmail}`}
+                >
                   {institutionalMeta.contact.admissionsEmail}
                 </a>
               </div>
-              <div>Phone: {institutionalMeta.contact.phone}</div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-white/60 font-medium w-20 shrink-0">Phone:</span>
+                <a
+                  className="text-white/90 hover:text-electric-yellow transition-colors font-medium"
+                  href={`tel:${institutionalMeta.contact.phone.replace(/\s+/g, '')}`}
+                >
+                  {institutionalMeta.contact.phone}
+                </a>
+              </div>
             </div>
           </div>
 

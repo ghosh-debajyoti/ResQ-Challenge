@@ -57,6 +57,17 @@ server.listen(5174, async () => {
     console.log('Saved footer-closeup.png');
   }
 
+  // Also capture mobile footer at 375px
+  await page.setViewport({ width: 375, height: 800 });
+  await page.goto('http://127.0.0.1:5174', { waitUntil: 'networkidle0' });
+  const footerMobileEl = await page.$('#footer');
+  if (footerMobileEl) {
+    await footerMobileEl.scrollIntoView();
+    await new Promise(r => setTimeout(r, 400));
+    await footerMobileEl.screenshot({ path: path.join(screenshotsDir, 'footer-closeup-mobile.png') });
+    console.log('Saved footer-closeup-mobile.png');
+  }
+
   await browser.close();
   server.close();
   process.exit(0);

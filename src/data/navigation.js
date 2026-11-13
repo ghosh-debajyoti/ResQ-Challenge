@@ -25,7 +25,6 @@ export const institutionalMeta = {
   ],
   contact: {
     address: "Atria Institute of Technology, ASKB Campus, 1st Main Rd, AGS Layout, Anandnagar, Hebbal, Bengaluru, Karnataka 560024",
-    email: "resq@atria.edu",
     admissionsEmail: "info@atria.edu",
     phone: "+91 7090329032"
   }
