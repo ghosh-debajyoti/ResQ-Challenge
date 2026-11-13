@@ -95,10 +95,10 @@ export const RegistrationModal = ({ isOpen, onClose }) => {
                 OFFICIAL ONBOARDING
               </span>
               <h3 id="modal-title" className="font-headline-md text-xl sm:text-headline-md text-institutional-navy font-bold mt-2">
-                Register Your School for RESQ CHALLENGE
+                Register Your School for ATRIA IT COMMUNITY CHALLENGE
               </h3>
               <p className="font-body-sm text-xs sm:text-body-sm text-secondary mt-1 leading-relaxed">
-                Express your school’s participation. An Atria initiative officer will coordinate the team onboarding kit.
+                Express your school’s participation in the Atria IT Community Challenge. An Atria initiative officer will coordinate the team onboarding kit.
               </p>
             </div>
 

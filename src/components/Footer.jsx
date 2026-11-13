@@ -18,7 +18,7 @@ export const Footer = () => {
             </div>
             
             <div className="font-headline-sm text-base sm:text-headline-sm font-bold text-clean-white">
-              RESQ CHALLENGE — Rescue Every Soul Quickly.
+              ATRIA IT COMMUNITY CHALLENGE — Theme: Rescue Every Soul Quickly.
             </div>
             
             <p className="font-body-sm text-xs sm:text-body-sm text-white/70 max-w-md leading-relaxed">

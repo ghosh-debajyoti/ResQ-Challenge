@@ -45,8 +45,8 @@ export const SocialChallenge = () => {
                   <p className="font-body-sm text-xs sm:text-body-sm text-secondary mb-4 leading-relaxed">
                     {card.step === "STEP 03" ? (
                       <>
-                        Tag official RESQ and Atria handles, include{" "}
-                        <span className="text-primary font-bold">#RESQChallenge</span> and{" "}
+                        Tag official Atria IT Community Challenge handles, include{" "}
+                        <span className="text-primary font-bold">#AtriaCommunityChallenge</span> and{" "}
                         <span className="text-primary font-bold">#AtriaInnovates</span>.
                       </>
                     ) : (

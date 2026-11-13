@@ -1,7 +1,7 @@
 export const faqsList = [
   {
-    question: "1. What is the RESQ CHALLENGE?",
-    answer: "The RESQ Challenge (Rescue Every Soul Quickly) is a high-impact student innovation movement spearheaded by Atria Institute of Technology. It challenges school teams from Classes 8 to 12 to identify pressing community problems and engineer tangible hardware, software, or civic solutions over an intensive 4-week cycle."
+    question: "1. What is the ATRIA IT COMMUNITY CHALLENGE?",
+    answer: "The Atria IT Community Challenge (Theme: Rescue Every Soul Quickly) is a high-impact student innovation movement spearheaded by Atria Institute of Technology. It challenges school teams from Classes 8 to 12 to identify pressing community problems and engineer tangible hardware, software, or civic solutions over an intensive 4-week cycle."
   },
   {
     question: "2. Who can participate?",
@@ -17,7 +17,7 @@ export const faqsList = [
   },
   {
     question: "5. Do students need prior technical knowledge?",
-    answer: "No advanced coding or engineering background is mandatory. The RESQ Challenge values empathetic observation and problem formulation just as much as technical assembly. We furnish accessible foundational workshops."
+    answer: "No advanced coding or engineering background is mandatory. The Atria IT Community Challenge values empathetic observation and problem formulation just as much as technical assembly. We furnish accessible foundational workshops."
   },
   {
     question: "6. Will mentors be available?",

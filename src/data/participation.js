@@ -2,7 +2,7 @@ export const participationSteps = [
   {
     step: "01",
     title: "SCHOOL PARTICIPATION",
-    description: "Schools express their interest in joining the RESQ Challenge via the institutional onboarding form."
+    description: "Schools express their interest in joining the Atria IT Community Challenge via the institutional onboarding form."
   },
   {
     step: "02",
@@ -54,9 +54,9 @@ export const socialChallengeSteps = [
   },
   {
     step: "STEP 03",
-    title: "03 — TAG RESQ CHALLENGE",
+    title: "03 — TAG COMMUNITY CHALLENGE",
     tagline: "Hashtag Campaign",
-    description: "Tag official RESQ and Atria handles, include #RESQChallenge and #AtriaInnovates.",
+    description: "Tag official Atria IT Community Challenge and Atria handles, include #AtriaCommunityChallenge and #AtriaInnovates.",
     gradient: "from-tech-magenta to-[#FF6B00]",
     icon: "tag",
     likes: "3.1k",

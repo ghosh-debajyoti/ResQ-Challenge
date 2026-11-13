@@ -17,7 +17,7 @@ export const FAQ = () => {
           centered
           eyebrow="GOT QUESTIONS?"
           title="Frequently Asked Questions"
-          description="Everything you need to know about the Project RESQ process, eligibility, and program logistics."
+          description="Everything you need to know about the Atria IT Community Challenge process, eligibility, and program logistics."
         />
 
         {/* Sleek Accordions */}

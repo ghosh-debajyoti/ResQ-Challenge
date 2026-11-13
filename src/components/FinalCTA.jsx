@@ -41,7 +41,7 @@ export const FinalCTA = ({ onOpenRegister }) => {
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-clean-white border border-white/30 font-label-lg text-sm sm:text-label-lg px-8 py-4 rounded-lg backdrop-blur-md transition-all active:scale-95"
                 href="#about"
               >
-                <span>EXPLORE RESCUE CHALLENGE</span>
+                <span>EXPLORE THE CHALLENGE</span>
                 <span className="material-symbols-outlined">arrow_forward</span>
               </a>
             </div>

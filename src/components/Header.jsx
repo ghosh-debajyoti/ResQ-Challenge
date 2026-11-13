@@ -140,10 +140,10 @@ export const Header = ({ onOpenRegister }) => {
             />
             <div className="hidden sm:flex flex-col border-l border-border-cool-grey pl-2.5 sm:pl-3">
               <span className="font-headline-sm text-xs sm:text-headline-sm font-bold tracking-tight text-institutional-navy leading-none whitespace-nowrap">
-                RESQ CHALLENGE
+                ATRIA IT COMMUNITY CHALLENGE
               </span>
               <span className="text-[9px] sm:text-[10px] font-label-sm text-secondary tracking-widest uppercase mt-0.5 whitespace-nowrap">
-                RESCUE EVERY SOUL QUICKLY
+                THEME: RESCUE EVERY SOUL QUICKLY
               </span>
             </div>
           </a>

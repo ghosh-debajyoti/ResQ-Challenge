@@ -25,9 +25,9 @@ export const Hero = ({ onOpenRegister }) => {
             {/* Grand Main Heading */}
             <div className="space-y-2">
               <h1 className="font-display-hero text-display-hero-mobile sm:text-display-hero font-extrabold tracking-tight leading-none text-clean-white">
-                RESQ <span className="text-electric-yellow font-extrabold">CHALLENGE</span>
-                <span className="text-white text-xl sm:text-3xl md:text-4xl block mt-2 font-headline-lg tracking-normal font-medium">
-                  RESCUE EVERY SOUL QUICKLY.
+                ATRIA IT <span className="text-electric-yellow font-extrabold">COMMUNITY CHALLENGE</span>
+                <span className="text-white text-xl sm:text-2xl md:text-3xl block mt-3 font-headline-lg tracking-normal font-semibold">
+                  THEME: RESCUE EVERY SOUL QUICKLY.
                 </span>
               </h1>
             </div>
@@ -81,14 +81,14 @@ export const Hero = ({ onOpenRegister }) => {
               
               {/* Glowing circular emblem badge */}
               <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full bg-gradient-to-tr from-institutional-navy via-tech-magenta to-electric-yellow p-1 shadow-inner flex items-center justify-center">
-                <div className="w-full h-full bg-[#071A35] rounded-full flex flex-col items-center justify-center p-3 text-clean-white border border-white/20">
-                  <span className="text-electric-yellow font-display-hero-mobile text-xl sm:text-2xl font-black">
-                    RESQ CHALLENGE
+                <div className="w-full h-full bg-[#071A35] rounded-full flex flex-col items-center justify-center p-3 text-clean-white border border-white/20 text-center">
+                  <span className="text-electric-yellow font-display-hero-mobile text-xs sm:text-sm font-black leading-tight">
+                    ATRIA IT COMMUNITY CHALLENGE
                   </span>
-                  <span className="text-[9px] font-badge-mono text-white/80 tracking-widest mt-1">
-                    SOCIETAL IMPACT
+                  <span className="text-[8px] sm:text-[9px] font-badge-mono text-white/90 tracking-wider mt-1 uppercase">
+                    THEME: RESCUE EVERY SOUL QUICKLY
                   </span>
-                  <span className="text-[10px] text-white/60 font-body-sm mt-0.5">
+                  <span className="text-[8px] sm:text-[9px] text-white/60 font-body-sm mt-0.5">
                     UN SDG ALIGNED
                   </span>
                 </div>

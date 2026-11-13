@@ -39,7 +39,7 @@ export const About = () => {
         <SectionHeading
           eyebrow="BEYOND CLASSROOMS. INTO COMMUNITIES."
           title="Innovation Begins With a Problem."
-          description="RESQ Challenge is a community-led initiative that encourages school students to understand societal challenges and use engineering and technology to develop meaningful solutions."
+          description="Atria IT Community Challenge is a community-led initiative that encourages school students to understand societal challenges and use engineering and technology to develop meaningful solutions."
         />
 
         {/* 3 Visual Information Cards */}
