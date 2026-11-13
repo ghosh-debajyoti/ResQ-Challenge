@@ -1,8 +1,9 @@
 export const navLinks = [
   { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Challenge', href: '#challenges' },
-  { name: 'Journey', href: '#journey' },
+  { name: 'About the Challenge', href: '#about' },
+  { name: 'The Journey', href: '#journey' },
+  { name: 'Challenges', href: '#challenges' },
+  { name: 'Rewards', href: '#rewards' },
   { name: 'Impact', href: '#impact' },
   { name: 'FAQs', href: '#faqs' },
 ];
@@ -24,7 +25,7 @@ export const institutionalMeta = {
   ],
   contact: {
     address: "Atria Institute of Technology, ASKB Campus, 1st Main Rd, AGS Layout, Anandnagar, Hebbal, Bengaluru, Karnataka 560024",
-    email: "challenge@atria.edu",
+    email: "resq@atria.edu",
     admissionsEmail: "info@atria.edu",
     phone: "+91 7090329032"
   }

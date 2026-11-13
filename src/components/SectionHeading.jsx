@@ -5,31 +5,26 @@ export const SectionHeading = ({
   title,
   description,
   centered = false,
-  eyebrowColor = "text-atria-red",
-  theme = "light",
-  className = ""
+  eyebrowColor = "text-primary",
+  theme = "light"
 }) => {
   const isDark = theme === "dark";
 
   return (
-    <div className={`mb-12 md:mb-16 ${centered ? 'text-center max-w-3xl mx-auto' : 'max-w-3xl'} ${className}`}>
+    <div className={`mb-14 ${centered ? 'text-center max-w-3xl mx-auto' : 'max-w-3xl'}`}>
       {eyebrow && (
-        <div className="flex items-center gap-2 mb-3">
-          {centered && <span className="h-px w-6 bg-atria-red/40" />}
-          <span className={`${eyebrowColor} font-nav text-xs font-semibold tracking-wider uppercase`}>
-            {eyebrow}
-          </span>
-          {centered && <span className="h-px w-6 bg-atria-red/40" />}
-        </div>
+        <span className={`${eyebrowColor} font-label-sm text-label-sm uppercase tracking-widest block mb-2`}>
+          {eyebrow}
+        </span>
       )}
-      <h2 className={`font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 ${
-        isDark ? 'text-clean-white' : 'text-yc-dark'
-      } leading-tight`}>
+      <h2 className={`font-headline-xl text-headline-xl-mobile sm:text-headline-xl font-bold mb-4 ${
+        isDark ? 'text-clean-white' : 'text-institutional-navy'
+      }`}>
         {title}
       </h2>
       {description && (
-        <p className={`font-body text-base sm:text-lg ${
-          isDark ? 'text-white/70' : 'text-yc-muted'
+        <p className={`font-body-lg text-body-lg ${
+          isDark ? 'text-white/80' : 'text-secondary'
         } leading-relaxed`}>
           {description}
         </p>

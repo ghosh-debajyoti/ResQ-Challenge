@@ -1,9 +1,8 @@
-# ATRIA IT COMMUNITY CHALLENGE
-
-**Theme: RESCUE EVERY SOUL QUICKLY.**
+# ATRIA IT COMMUNITY CHALLENGE — RESCUE EVERY SOUL QUICKLY
 
 > Presented by Atria Institute of Technology, Bengaluru.
-> Real Problems. Real Solutions. Real Impact.
+> Theme: Rescue Every Soul Quickly.
+> Tagline: Real Problems. Real Solutions. Real Impact.
 
 A community-led innovation challenge empowering school students (Classes 8–12) to identify real-world societal problems, build engineering-based solutions, and create meaningful community impact.
 

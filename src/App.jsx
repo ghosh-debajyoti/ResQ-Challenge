@@ -5,8 +5,7 @@ import { About } from './components/About';
 import { Journey } from './components/Journey';
 import { ChallengeCategories } from './components/ChallengeCategories';
 import { Participation } from './components/Participation';
-import { ThePeople } from './components/ThePeople';
-import { CommunityStories } from './components/CommunityStories';
+import { SocialChallenge } from './components/SocialChallenge';
 import { Rewards } from './components/Rewards';
 import { GrandFinale } from './components/GrandFinale';
 import { Impact } from './components/Impact';
@@ -22,7 +21,7 @@ export function App() {
   const closeRegister = () => setIsRegisterOpen(false);
 
   return (
-    <div className="min-h-screen bg-white text-yc-dark flex flex-col antialiased selection:bg-atria-red selection:text-clean-white overflow-x-hidden font-body">
+    <div className="min-h-screen bg-background text-on-surface flex flex-col antialiased selection:bg-primary-container selection:text-clean-white overflow-x-hidden">
       {/* SECTION 01 — HEADER & NAVIGATION */}
       <Header onOpenRegister={openRegister} />
 
@@ -30,41 +29,38 @@ export function App() {
         {/* SECTION 02 — HERO */}
         <Hero onOpenRegister={openRegister} />
 
-        {/* SECTION 03 — THE IDEA */}
+        {/* SECTION 03 — ABOUT */}
         <About />
 
-        {/* SECTION 04 — HOW IT WORKS (FOUR-WEEK JOURNEY) */}
+        {/* SECTION 04 — FOUR-WEEK JOURNEY */}
         <Journey onOpenRegister={openRegister} />
 
-        {/* SECTION 05 — CHALLENGE AREAS */}
+        {/* SECTION 05 — CHALLENGE CATEGORIES */}
         <ChallengeCategories />
 
-        {/* SECTION 06 — PARTICIPATION */}
+        {/* SECTION 06 — PARTICIPATION JOURNEY */}
         <Participation onOpenRegister={openRegister} />
 
-        {/* SECTION 07 — THE PEOPLE */}
-        <ThePeople />
+        {/* SECTION 07 — SOCIAL MEDIA CHALLENGE */}
+        <SocialChallenge />
 
-        {/* SECTION 08 — COMMUNITY STORIES */}
-        <CommunityStories />
-
-        {/* SECTION 09 — RECOGNITION */}
+        {/* SECTION 08 — REWARDS & RECOGNITION */}
         <Rewards />
 
-        {/* SECTION 10 — THE GRAND FINALE */}
+        {/* SECTION 09 — GRAND FINALE */}
         <GrandFinale />
 
-        {/* SECTION 11 — ATRIA INSTITUTIONAL IDENTITY */}
+        {/* SECTION 10 — INSTITUTIONAL IMPACT */}
         <Impact />
 
-        {/* SECTION 12 — FAQ */}
+        {/* SECTION 11 — FAQ */}
         <FAQ />
 
-        {/* SECTION 13 — FINAL CTA */}
+        {/* SECTION 12 — FINAL CTA */}
         <FinalCTA onOpenRegister={openRegister} />
       </main>
 
-      {/* SECTION 14 — FOOTER */}
+      {/* SECTION 13 — FOOTER */}
       <Footer />
 
       {/* REGISTRATION MODAL */}

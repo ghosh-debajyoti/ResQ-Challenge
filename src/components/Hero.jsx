@@ -3,131 +3,128 @@ import { motion } from 'framer-motion';
 
 export const Hero = ({ onOpenRegister }) => {
   return (
-    <section className="relative bg-white text-yc-dark border-b border-yc-border pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28" id="hero">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="relative custom-mesh-hero text-clean-white overflow-hidden py-12 sm:py-20 lg:py-28 border-b border-white/10" id="hero">
+      <div className="absolute inset-0 grid-lines-overlay opacity-30 pointer-events-none"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
-          {/* Left Column: Typography & Intent */}
+          {/* Left Hero Content */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="lg:col-span-7 space-y-6"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-8 space-y-5 sm:space-y-6"
           >
-            {/* Institution Eyebrow */}
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-atria-red" />
-              <span className="font-nav text-xs font-semibold tracking-wider text-atria-red uppercase">
-                ATRIA INSTITUTE OF TECHNOLOGY PRESENTS
-              </span>
+            {/* Institutional Eyebrow Tag */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-electric-yellow font-label-sm text-xs sm:text-label-sm">
+              <span className="material-symbols-outlined text-[16px]">verified</span>
+              <span>ATRIA INSTITUTE OF TECHNOLOGY PRESENTS</span>
             </div>
 
-            {/* Main Headline */}
-            <div className="space-y-3">
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-yc-dark leading-[1.05]">
-                ATRIA IT <br />
-                COMMUNITY CHALLENGE
+            {/* Grand Main Heading */}
+            <div className="space-y-2">
+              <h1 className="font-display-hero text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-clean-white">
+                ATRIA IT <span className="text-electric-yellow font-extrabold">COMMUNITY CHALLENGE</span>
+                <span className="text-white text-lg sm:text-2xl md:text-3xl block mt-2 sm:mt-3 font-headline-lg tracking-normal font-medium">
+                  <span className="text-electric-yellow/90 font-semibold text-xs sm:text-sm uppercase tracking-wider block mb-1">
+                    CENTRAL THEME
+                  </span>
+                  RESCUE EVERY SOUL QUICKLY.
+                </span>
               </h1>
-              
-              {/* Theme & Tagline Lockup */}
-              <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-yc-bg-subtle border border-yc-border text-xs font-nav font-semibold text-atria-red tracking-wider uppercase">
-                  THEME: RESCUE EVERY SOUL QUICKLY.
-                </span>
-                <span className="text-xs font-nav text-yc-muted hidden sm:inline">•</span>
-                <span className="text-xs font-nav text-yc-muted font-medium tracking-wide uppercase hidden sm:inline">
-                  Real Problems. Real Solutions. Real Impact.
-                </span>
-              </div>
             </div>
 
-            {/* Supporting Statements */}
-            <div className="space-y-3 max-w-2xl">
-              <p className="font-body text-lg sm:text-xl text-yc-dark font-medium leading-relaxed">
-                Empowering the next generation to identify real-world problems, build practical solutions and create meaningful community impact.
-              </p>
-              <p className="font-body text-base text-yc-muted leading-relaxed">
-                A community-driven initiative bringing together school students, mentors and problem solvers to turn ideas into action.
-              </p>
+            {/* Tagline Banner matching Atria ASIP Cadence */}
+            <div className="inline-block bg-clean-white text-institutional-navy font-headline-md text-sm sm:text-headline-sm md:text-headline-md font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg shadow-md border-l-4 border-tech-magenta">
+              REAL PROBLEMS. REAL SOLUTIONS. REAL IMPACT.
             </div>
 
-            {/* Audience Badge */}
+            {/* Description */}
+            <p className="font-body-lg text-sm sm:text-body-lg text-white/85 max-w-2xl leading-relaxed">
+              A community-led innovation challenge empowering school students to identify real-world societal problems, build engineering-based solutions and create measurable community impact.
+            </p>
+
+            {/* Target Audience Tag */}
             <div className="pt-1">
-              <span className="inline-flex items-center gap-2 text-xs font-nav font-semibold text-yc-dark bg-yc-bg-subtle border border-yc-border px-3.5 py-1.5 rounded">
-                <span className="material-symbols-outlined text-[16px] text-atria-red">school</span>
+              <span className="inline-flex items-center gap-2 bg-[#FF6B00] text-clean-white font-label-sm text-xs sm:text-label-sm font-bold px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg shadow-[#FF6B00]/30 tracking-wider">
+                <span className="material-symbols-outlined text-[18px]">groups</span>
                 FOR SCHOOL STUDENTS — CLASSES 8–12
               </span>
             </div>
 
             {/* CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onOpenRegister}
-                className="inline-flex items-center justify-center gap-2 bg-atria-red hover:bg-atria-red-hover text-clean-white font-nav text-sm font-semibold px-6 py-3.5 rounded-md transition-colors shadow-none active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-[#8c1c20] text-clean-white font-label-lg text-sm sm:text-label-lg px-6 py-3.5 sm:px-7 rounded-lg border border-white/20 shadow-lg hover:shadow-[0_0_20px_rgba(169,35,40,0.5)] transition-all duration-200 active:scale-95"
               >
                 <span>REGISTER YOUR SCHOOL</span>
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[20px]">rocket_launch</span>
               </button>
 
               <a
-                href="#about"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-yc-bg-subtle text-yc-dark border border-yc-border font-nav text-sm font-semibold px-6 py-3.5 rounded-md transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-clean-white text-institutional-navy hover:bg-surface-offwhite font-label-lg text-sm sm:text-label-lg px-6 py-3.5 sm:px-7 rounded-lg shadow-lg hover:translate-y-[-2px] transition-all duration-200 active:scale-95"
+                href="#journey"
               >
                 <span>EXPLORE THE CHALLENGE</span>
-                <span className="material-symbols-outlined text-[18px] text-yc-muted">expand_more</span>
+                <span className="material-symbols-outlined text-[20px]">arrow_downward</span>
               </a>
-            </div>
-
-            {/* Fast Editorial Metrics Strip */}
-            <div className="pt-8 border-t border-yc-border grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
-              <div>
-                <div className="font-display text-2xl font-bold text-yc-dark">04 Weeks</div>
-                <div className="font-body text-xs text-yc-muted mt-0.5">Structured Sprint</div>
-              </div>
-              <div>
-                <div className="font-display text-2xl font-bold text-yc-dark">Classes 8–12</div>
-                <div className="font-body text-xs text-yc-muted mt-0.5">School Eligibility</div>
-              </div>
-              <div>
-                <div className="font-display text-2xl font-bold text-yc-dark">1:1 Mentorship</div>
-                <div className="font-body text-xs text-yc-muted mt-0.5">Atria Collegiate Engineers</div>
-              </div>
-              <div>
-                <div className="font-display text-2xl font-bold text-yc-dark">Field Pilots</div>
-                <div className="font-body text-xs text-yc-muted mt-0.5">Empirical Deployment</div>
-              </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Editorial Photograph & Storytelling Composition */}
+          {/* Right Hero Graphic / Badge Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-5 relative"
+            transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+            className="lg:col-span-4 mt-4 lg:mt-0"
           >
-            <div className="border border-yc-border rounded-lg overflow-hidden bg-yc-bg-subtle p-2">
-              <div className="relative aspect-[4/3] sm:aspect-[5/4] rounded overflow-hidden bg-yc-bg-muted">
-                <img
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                  alt="Students collaborating on hardware prototype engineering"
-                  className="w-full h-full object-cover grayscale contrast-105 hover:grayscale-0 transition-all duration-500"
-                  loading="eager"
-                />
-                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm border border-yc-border px-2.5 py-1 rounded text-[11px] font-nav font-medium text-yc-dark">
-                  Cohort 2026 • Bengaluru
+            <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 shadow-2xl text-center space-y-5 sm:space-y-6">
+              
+              {/* Glowing circular emblem badge */}
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full bg-gradient-to-tr from-institutional-navy via-tech-magenta to-electric-yellow p-1 shadow-inner flex items-center justify-center">
+                <div className="w-full h-full bg-[#071A35] rounded-full flex flex-col items-center justify-center p-3 text-clean-white border border-white/20">
+                  <span className="text-electric-yellow font-display-hero-mobile text-sm sm:text-base font-black leading-tight">
+                    ATRIA IT
+                  </span>
+                  <span className="text-clean-white font-display-hero-mobile text-xs sm:text-xs font-black tracking-tight leading-tight">
+                    COMMUNITY CHALLENGE
+                  </span>
+                  <span className="text-[8px] sm:text-[9px] font-badge-mono text-electric-yellow/90 tracking-wider mt-1.5 uppercase font-bold">
+                    THEME
+                  </span>
+                  <span className="text-[8px] sm:text-[9px] text-white/90 font-body-sm text-center px-2 mt-0.5 leading-tight">
+                    RESCUE EVERY SOUL QUICKLY
+                  </span>
+                  <span className="text-[8px] text-white/50 font-body-sm mt-0.5">
+                    UN SDG ALIGNED
+                  </span>
                 </div>
               </div>
-              
-              {/* Editorial Caption */}
-              <div className="p-4 space-y-1">
-                <div className="flex items-center justify-between text-xs font-nav text-atria-red font-semibold uppercase tracking-wider">
-                  <span>Student Engineering In Action</span>
-                  <span className="text-yc-muted font-normal normal-case">Hands-on Labs</span>
+
+              {/* Metric Telemetry */}
+              <div className="grid grid-cols-2 gap-3 text-left">
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                  <div className="font-headline-sm text-sm sm:text-headline-sm text-electric-yellow font-bold">
+                    4 WEEKS
+                  </div>
+                  <div className="font-label-sm text-[10px] sm:text-[11px] text-white/70">
+                    Intensive Pipeline
+                  </div>
                 </div>
-                <p className="font-body text-xs sm:text-sm text-yc-muted leading-relaxed">
-                  School squads iterate hardware prototypes and embedded telemetry alongside Atria collegiate mentors.
-                </p>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                  <div className="font-headline-sm text-sm sm:text-headline-sm text-clean-white font-bold">
+                    100%
+                  </div>
+                  <div className="font-label-sm text-[10px] sm:text-[11px] text-white/70">
+                    Hands-on Mentorship
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-xs text-white/70 font-body-sm border-t border-white/10 pt-3">
+                Organized by <span className="text-clean-white font-semibold">Atria Institute of Technology</span> Societal Projects (ASIP) Division.
               </div>
             </div>
           </motion.div>

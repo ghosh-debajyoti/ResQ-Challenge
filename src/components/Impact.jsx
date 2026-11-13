@@ -1,122 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from './SectionHeading';
-import { institutionalMeta } from '../data/navigation';
-
-const institutionalPillars = [
-  {
-    num: "01",
-    title: "Student Engagement",
-    description: "Immersing school students in real engineering methodologies before university, inspiring lifelong careers in science, robotics, and societal problem solving."
-  },
-  {
-    num: "02",
-    title: "Hands-on Innovation",
-    description: "Providing physical access to Atria's advanced maker facilities, IoT prototyping benches, 3D printers, and collegiate engineering scholars."
-  },
-  {
-    num: "03",
-    title: "Community Collaboration",
-    description: "Bridging the gap between secondary school curricula and actual neighborhood challenges by building field-ready civic deployments."
-  },
-  {
-    num: "04",
-    title: "Experiential Education",
-    description: "Replacing passive rote memorization with iterative engineering: hypothesize, build, test, measure, and present."
-  }
-];
+import { impactPillars } from '../data/awards';
 
 export const Impact = () => {
   return (
-    <section className="py-16 sm:py-24 bg-white border-b border-yc-border text-yc-dark" id="impact">
+    <section className="py-12 sm:py-20 bg-clean-white border-b border-border-cool-grey" id="impact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionHeading
-          eyebrow="INSTITUTIONAL PURPOSE &amp; HERITAGE"
-          title="ENGINEERING BEYOND THE CLASSROOM."
-          description="Atria Institute of Technology champions innovation as a public good. This initiative connects secondary school curiosity with collegiate engineering capability to foster social impact."
+          eyebrow="BUILDING TOMORROW. STARTING TODAY."
+          title="Engineering Beyond the Classroom."
+          description="Bridging the gap between secondary school curricula and high-impact engineering innovation through Atria’s multidisciplinary ecosystem."
         />
 
-        {/* 4 Clean Editorial Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-yc-border rounded-lg overflow-hidden divide-y md:divide-y-0 md:divide-x divide-yc-border bg-white mb-12 sm:mb-16">
-          {institutionalPillars.map((pillar) => (
-            <div
-              key={pillar.num}
-              className="p-6 sm:p-7 flex flex-col justify-between hover:bg-yc-bg-subtle/50 transition-colors"
+        {/* 3 Large Visual Impact Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          {impactPillars.map((pillar, idx) => (
+            <motion.div
+              key={pillar.pillar}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              className="bg-surface-offwhite rounded-xl p-6 sm:p-8 border border-border-cool-grey hover:border-institutional-navy transition-all duration-200"
             >
-              <div>
-                <span className="font-display font-mono text-xs font-bold text-atria-red">
-                  {pillar.num}
+              <div className="w-12 h-12 rounded-lg bg-institutional-navy text-clean-white flex items-center justify-center mb-6 shadow-sm">
+                <span className="material-symbols-outlined text-2xl">
+                  {pillar.icon}
                 </span>
-                <h3 className="font-display text-base font-bold text-yc-dark mt-3 mb-2 tracking-tight">
-                  {pillar.title}
-                </h3>
-                <p className="font-body text-xs sm:text-sm text-yc-muted leading-relaxed">
-                  {pillar.description}
-                </p>
               </div>
-
-              <div className="mt-6 pt-3 border-t border-yc-border text-[11px] font-nav text-yc-muted">
-                Atria Community Mandate
-              </div>
-            </div>
+              <span className={`font-badge-mono text-badge-mono ${pillar.tagColor} font-bold`}>
+                {pillar.pillar}
+              </span>
+              <h3 className="font-headline-sm text-lg sm:text-headline-sm text-institutional-navy font-bold mt-1 mb-3">
+                {pillar.title}
+              </h3>
+              <p className="font-body-md text-sm sm:text-body-md text-secondary leading-relaxed">
+                {pillar.description}
+              </p>
+            </motion.div>
           ))}
         </div>
 
-        {/* Official Atria Institutional Credibility Panel */}
+        {/* Dedicated Atria Institutional Credibility Card */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="border border-yc-border rounded-lg p-6 sm:p-10 bg-yc-bg-subtle flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+          transition={{ duration: 0.5 }}
+          className="bg-gradient-to-r from-institutional-navy via-[#0A3366] to-institutional-navy rounded-2xl p-6 sm:p-10 md:p-12 text-clean-white border border-white/10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8"
         >
-          <div className="space-y-4 max-w-2xl">
-            {/* Logo Container */}
-            <div className="inline-block bg-white p-3 rounded border border-yc-border shadow-sm">
+          <div className="max-w-2xl space-y-4 text-center md:text-left">
+            <div className="inline-block bg-clean-white p-3 sm:p-3.5 rounded-xl shadow-md">
               <img
-                src="/assets/atria-logo.png"
                 alt="Atria Institute of Technology Logo"
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-11 sm:h-14 w-auto object-contain"
+                src="/assets/atria-logo.png"
               />
             </div>
-
-            <h3 className="font-display text-xl sm:text-2xl font-bold text-yc-dark tracking-tight">
-              Atria Institute of Technology, Bengaluru
+            <h3 className="font-headline-lg text-2xl sm:text-headline-lg font-bold">
+              Atria Institute of Technology
             </h3>
-
-            <p className="font-body text-xs sm:text-sm text-yc-muted leading-relaxed">
-              Established in 2000 in Hebbal, Bengaluru, Atria Institute of Technology is an Autonomous Institution affiliated with Visvesvaraya Technological University (VTU), accredited with NAAC A++ Grade, and approved by AICTE. It serves as a regional hub for experiential engineering, incubation, and societal problem solving.
+            <p className="font-body-lg text-sm sm:text-body-lg text-white/90 leading-relaxed">
+              Inspiring young minds to use engineering and innovation to solve society's problems. Autonomous institution under VTU with NAAC A++ accreditation.
             </p>
-
-            <div className="flex flex-wrap items-center gap-2 pt-1">
-              <span className="px-2.5 py-1 bg-white border border-yc-border rounded text-[11px] font-nav font-medium text-yc-dark">
-                Autonomous VTU Affiliation
-              </span>
-              <span className="px-2.5 py-1 bg-atria-red text-white rounded text-[11px] font-nav font-semibold">
-                NAAC A++ Grade
-              </span>
-              <span className="px-2.5 py-1 bg-white border border-yc-border rounded text-[11px] font-nav font-medium text-yc-dark">
-                AICTE Approved
-              </span>
-              <span className="px-2.5 py-1 bg-white border border-yc-border rounded text-[11px] font-nav font-medium text-yc-dark">
-                Estd. 2000 • Bengaluru
-              </span>
-            </div>
           </div>
 
-          <div className="shrink-0 space-y-3 w-full lg:w-auto">
+          <div className="flex-shrink-0 w-full sm:w-auto text-center md:text-right">
             <a
-              href="https://atria.edu.in/"
-              target="_blank"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-electric-yellow text-institutional-navy hover:bg-clean-white font-label-lg text-sm sm:text-label-lg px-6 py-3.5 rounded-lg font-bold transition-all duration-200 shadow-md active:scale-95"
+              href="https://atria.edu.in"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 w-full lg:w-auto bg-yc-navy hover:bg-yc-navy-secondary text-white font-nav text-xs sm:text-sm font-semibold px-6 py-3.5 rounded transition-colors shadow-none"
+              target="_blank"
             >
-              <span>Explore Atria Portal</span>
-              <span className="material-symbols-outlined text-[16px]">arrow_outward</span>
+              <span>Learn About Atria</span>
+              <span className="material-symbols-outlined text-[18px]">open_in_new</span>
             </a>
-            <div className="text-center text-[11px] font-body text-yc-muted">
-              Official Institutional Site: atria.edu.in
-            </div>
           </div>
         </motion.div>
 

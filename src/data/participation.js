@@ -56,7 +56,7 @@ export const socialChallengeSteps = [
     step: "STEP 03",
     title: "03 — TAG COMMUNITY CHALLENGE",
     tagline: "Hashtag Campaign",
-    description: "Tag official Atria IT Community Challenge and Atria handles, include #AtriaCommunityChallenge and #AtriaInnovates.",
+    description: "Tag official Atria and Challenge handles, include #AtriaCommunityChallenge and #AtriaInnovates.",
     gradient: "from-tech-magenta to-[#FF6B00]",
     icon: "tag",
     likes: "3.1k",
